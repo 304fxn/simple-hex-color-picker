@@ -1,0 +1,75 @@
+// variables
+$hex-box-color: #1b212e;
+//
+
+// mixins
+@mixin centered($direction) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: center;
+  justify-content: space-around;
+}
+//
+
+// reset
+* {
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+//
+
+body {
+  @include centered(column);
+  min-height: 100vh;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(204, 204, 204, 1) 25%,
+    rgba(158, 158, 158, 1) 50%,
+    rgba(204, 204, 204, 1) 75%,
+    rgba(255, 255, 255, 1) 100%
+  );
+}
+
+// main ID
+#hex-box {
+  @include centered(column);
+  height: 500px;
+  width: 700px;
+  border: 2px solid #000;
+  background: $hex-box-color;
+  box-shadow: rgba(0, 0, 0, 1) 0px 5px 15px;
+  border-radius: 30px;
+
+  @media screen and(max-width:740px) {
+    width: 90%;
+  }
+
+  #box-script {
+    @include centered(column);
+    .color-name {
+      color: aquamarine;
+      margin-bottom: 1rem;
+    }
+    #inputHexCode {
+      width: 150px;
+      text-align: center;
+      font-size: 2rem;
+      color: #ccc;
+      background: $hex-box-color;
+      border: 0;
+      border-bottom: 2px solid #ccc;
+    }
+  }
+  #color-changed-box {
+    width: 80%;
+    height: 70%;
+    border-radius: 5px;
+    border: 1px solid #000;
+  }
+}
+
+input:focus {
+  outline: none;
+}

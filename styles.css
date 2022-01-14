@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  min-height: 100vh;
+  background: linear-gradient(180deg, white 0%, #cccccc 25%, #9e9e9e 50%, #cccccc 75%, white 100%);
+}
+
+#hex-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 500px;
+  width: 700px;
+  border: 2px solid #000;
+  background: #1b212e;
+  box-shadow: black 0px 5px 15px;
+  border-radius: 30px;
+}
+
+@media screen and (max-width: 740px) {
+  #hex-box {
+    width: 90%;
+  }
+}
+
+#hex-box #box-script {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#hex-box #box-script .color-name {
+  color: aquamarine;
+  margin-bottom: 1rem;
+}
+
+#hex-box #box-script #inputHexCode {
+  width: 150px;
+  text-align: center;
+  font-size: 2rem;
+  color: #ccc;
+  background: #1b212e;
+  border: 0;
+  border-bottom: 2px solid #ccc;
+}
+
+#hex-box #color-changed-box {
+  width: 80%;
+  height: 70%;
+  border-radius: 5px;
+  border: 1px solid #000;
+}
+
+input:focus {
+  outline: none;
+}
